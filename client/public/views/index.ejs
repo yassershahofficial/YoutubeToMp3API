@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT to MP3 API</title>
+</head>
+<body>
+    <h1>Youtube to MP3 Converter</h1>
+    <div class="top-container">
+        <form action="/convert" method="post">
+            <input type="text" id="videoId" name="videoId" placeholder="Please enter your link here">
+            <button>Convert</button>
+        </form>
+    </div>
+    <div class="bot-container">
+        <% if(success){ %>
+            <p><%= song_title %></p>
+            <p><%= duration %></p>
+            <a href="<%= song_link %>">
+                <button>Download</button>
+            </a>
+        <% } %>
+
+    </div>
+</body>
+</html>
